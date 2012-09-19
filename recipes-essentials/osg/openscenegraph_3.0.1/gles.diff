@@ -308,7 +308,7 @@ diff -ur openscenegraph/src/osgUtil/ShaderGen.cpp openscenegraphnew/src/osgUtil/
              "  if (diff > 0.0)\n"\
              "  {\n"\
 -            "    vec3 halfDir = normalize(ld+vd);\n"\
-+            "    highp vec3 halfDir = normalize(ld+vd);\n"\ //C,H: Syntax error, highp vec3 ihighp halfDir changed
++            "    highp vec3 halfDir = normalize(ld+vd);\n"\ 
              "    color.rgb += base.a * gl_FrontLightProduct[0].specular.rgb * \n"\
              "      pow(max(dot(halfDir, nd), 0.0), gl_FrontMaterial.shininess);\n"\
              "  }\n";

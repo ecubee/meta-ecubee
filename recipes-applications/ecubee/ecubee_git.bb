@@ -2,9 +2,10 @@ DESCRIPTION = "EcubeE main Demo application"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3b58"
 
+DEPENDS += "openscenegraph"
 RDEPENDS += "openscenegraph"
 
-PR = "r3"
+PR = "r4"
 
 S = "${WORKDIR}/git"
 SRC_URI = "git://github.com/mlaurijsse/ecubee.git;branch=master"
