@@ -3,7 +3,7 @@ LICENSE = "OSGPL"
 
 DEPENDS += "libgles-omap3 curl libxml2 gtk+ ffmpeg poppler libxrandr"
 
-PR = "r5"
+PR = "r7"
 
 inherit cmake
 
@@ -15,7 +15,7 @@ SRC_URI = "http://www.openscenegraph.org/downloads/developer_releases/OpenSceneG
 SRC_URI[osg.md5sum] = "c43a25d023e635c3566b2083d8e6d956"
 SRC_URI[osg.sha256sum] = "0c1103574b0a5a27c7d68d43454f1bf9c0cea114a583c42637bc8eb47b1d8296"
 
-S = "${WORKDIR}/${PN}-${PV}"
+S = "${WORKDIR}/OpenSceneGraph-${PV}"
 
 # choose between
 # _OPENTHREADS_ATOMIC_USE_GCC_BUILTINS
