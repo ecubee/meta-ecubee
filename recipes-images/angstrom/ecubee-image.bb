@@ -1,6 +1,6 @@
 # Ecubee Image based on Angstroms systemd-image
 LICENSE = "MIT"
-PR="r5"
+PR="r6"
 
 IMAGE_PREPROCESS_COMMAND = "rootfs_update_timestamp"
 
@@ -12,12 +12,9 @@ CONMANPKGS_libc-uclibc = ""
 
 
 
-DEPENDS += "task-base-extended \
+DEPENDS += "bzip2 \
 "
 
-RDEPENDS += "openscenegraph \
-	ecubee \
-"
 
 IMAGE_INSTALL += " \
 	task-base-extended \
@@ -27,6 +24,7 @@ IMAGE_INSTALL += " \
 	${CONMANPKGS} \
 	${ROOTFS_PKGMANAGE_PKGS} \
 	timestamp-service \
+	ecubee \
 "
 
 IMAGE_DEV_MANAGER   = "udev"
