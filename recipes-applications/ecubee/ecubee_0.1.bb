@@ -12,7 +12,7 @@ S="${WORKDIR}/git"
 SRC_URI = "git://github.com/mlaurijsse/ecubee.git;branch=master"
 
 # Bitbakes likes a fixed version
-SRCREV = "f24c9b7a4ed0452aeb162ed358ebb881fba8d897"
+SRCREV = "27b176e36b421e6ab3d7d2fb5196870b28912451"
 
 
 inherit cmake
