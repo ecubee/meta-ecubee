@@ -9,7 +9,7 @@ RDEPENDS += "openscenegraph"
 PR = "r16"
 
 S="${WORKDIR}/git"
-SRC_URI = "git://github.com/mlaurijsse/ecubee.git;branch=master"
+SRC_URI = "git://github.com/mlaurijsse/Ecubee.git;branch=master"
 
 # Bitbakes likes a fixed version
 SRCREV = "27b176e36b421e6ab3d7d2fb5196870b28912451"
