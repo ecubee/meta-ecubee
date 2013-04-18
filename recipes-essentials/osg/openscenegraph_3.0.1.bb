@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3
 
 DEPENDS += "libgles-omap3 curl libxml2 gtk+ ffmpeg poppler libxrandr"
 
-PR = "r12"
+PR = "r13"
 
 inherit cmake
 
@@ -30,6 +30,7 @@ EXTRA_OECMAKE = " -DCMAKE_BUILD_TYPE=Release \
                   -DOSG_GL3_AVAILABLE=OFF \
                   -DOSG_GLES1_AVAILABLE=OFF \
                   -DOSG_GLES2_AVAILABLE=ON \
+		  -DOPENGL_INCLUDE_DIR=/usr/include/GLES2/ \
                   -DOPENGL_egl_LIBRARY=/usr/lib/libEGL.so \
                   -DOPENGL_gl_LIBRARY=/usr/lib/libGLESv2.so \
                   -DOSG_GL_DISPLAYLISTS_AVAILABLE=OFF \
