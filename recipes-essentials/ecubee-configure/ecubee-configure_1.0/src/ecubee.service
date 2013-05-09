@@ -1,0 +1,11 @@
+[Unit]
+Description=Ecubee Demo App
+Requires=pvr-init.service x.service
+After=syslog.target pvr-init.service x.service
+
+[Service]
+ExecStart=-/usr/bin/ecubee
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=graphical.target

@@ -14,6 +14,6 @@ SRC_URI = "git://github.com/mlaurijsse/Ecubee.git;branch=master"
 
 # Bitbakes likes a fixed version
 
-SRCREV = "ca450c492c4c6676329c576f4975b5432adcd575"
-inherit autotools
-#inherit cmake
+SRCREV = "d759452486a6c719dc594ce6448c4536c3a45b4d"
+#inherit autotools
+inherit cmake

@@ -1,0 +1,11 @@
+[Unit]
+Description=X Server with retro grid
+Requires=pvr-init.service
+After=syslog.target pvr-init.service
+
+[Service]
+ExecStart=-/usr/bin/X -retro
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=graphical.target

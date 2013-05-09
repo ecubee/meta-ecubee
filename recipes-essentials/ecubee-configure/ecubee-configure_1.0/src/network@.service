@@ -1,0 +1,7 @@
+[Service]
+ExecStart=/sbin/ifup %i
+Type=oneshot
+RemainAfterExit=yes
+#ExecStop=/sbin/ifdown %i
+StandardOutput=syslog+console
+

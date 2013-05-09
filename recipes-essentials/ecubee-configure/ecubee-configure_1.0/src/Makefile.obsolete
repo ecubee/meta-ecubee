@@ -1,0 +1,22 @@
+INSTALL = cp
+INSTALL_PROGRAM = $(INSTALL)
+INSTALL_DATA = ${INSTALL}
+exec_prefix = /usr
+bindir = $(exec_prefix)/bin
+sysconfdir = /etc
+
+all:
+
+install:
+	mkdir -p $(DESTDIR)$(sysconfdir)/ecubee
+	mkdir -p $(DESTDIR)$(bindir)
+	mkdir -p $(DESTDIR)$(sysconfdir)/udev/rules.d
+	mkdir -p $(DESTDIR)/lib/systemd/system
+	mkdir -p $(DESTDIR)/home/root
+	mkdir -p $(DESTDIR)$(sysconfdir)/modules-load.d
+	$(INSTALL_PROGRAM) ecubee-configure.sh $(DESTDIR)$(bindir)
+	$(INSTALL_DATA) hostname-bart hostname-gertjan hostname-martijn interfaces $(DESTDIR)$(sysconfdir)/ecubee
+	$(INSTALL_DATA) ecubee.rules $(DESTDIR)$(sysconfdir)/udev/rules.d
+	$(INSTALL_DATA) network@.service $(DESTDIR)/lib/systemd/system
+	$(INSTALL_DATA) bashrc $(DESTDIR)/home/root/.bashrc
+	$(INSTALL_DATA) g_ether.conf $(DESTDIR)$(sysconfdir)/modules-load.d
