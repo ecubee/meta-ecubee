@@ -10,10 +10,10 @@ PV = "1.1+gitr${SRCPV}"
 #PR = "r16"
 
 S="${WORKDIR}/git"
-SRC_URI = "git://github.com/mlaurijsse/Ecubee.git;branch=master"
+SRC_URI = "git://github.com/ecubee/Ecubee.git;branch=master"
 
 # Bitbakes likes a fixed version
 
-SRCREV = "d759452486a6c719dc594ce6448c4536c3a45b4d"
+SRCREV = "40199724cf4530e20aab256a657e9c31c4c9cf63"
 #inherit autotools
 inherit cmake
