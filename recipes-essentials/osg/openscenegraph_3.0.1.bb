@@ -10,7 +10,7 @@ inherit cmake
 
 FILESPATH =. "${FILE_DIRNAME}/openscenegraph_3.0.1:"
 
-SRC_URI = "http://www.openscenegraph.org/downloads/developer_releases/OpenSceneGraph-3.0.1.zip;name=osg \
+SRC_URI = "http://www.openscenegraph.org/downloads/stable_releases/OpenSceneGraph-3.0.1/source/OpenSceneGraph-3.0.1.zip;name=osg \
            file://gles.diff"
 
 SRC_URI[osg.md5sum] = "c43a25d023e635c3566b2083d8e6d956"
@@ -49,9 +49,8 @@ FILES_${PN} = " ${bindir}/* ${libdir}/osgPlugins-${PV}/*.so "
 FILES_${PN}-dbg += "${libdir}/osgPlugins-${PV}/.debug"
 
 python populate_packages_prepend () {
-	glibdir = bb.data.expand('${libdir}', d)
-
-	do_split_packages(d, glibdir, '^lib(.*)\.so\.*', 'lib%s', 'OpenSceneGraph %s library', extra_depends='', allow_links=True)
+    glibdir = bb.data.expand('${libdir}', d)
+    do_split_packages(d, glibdir, '^lib(.*)\.so\.*', 'lib%s', 'OpenSceneGraph %s library', extra_depends='', allow_links=True)
 }
 
 ALLOW_EMPTY = "1"

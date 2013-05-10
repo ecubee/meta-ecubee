@@ -14,7 +14,6 @@ IMAGE_INSTALL += " \
 	libgles-omap3-dev \
 	libgles-omap3-dbg \
 	libgles-omap3-x11demos \
-	libgles-omap3-tests \
 	libgles-omap3-rawdemos \
 "
 
