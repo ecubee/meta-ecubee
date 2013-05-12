@@ -14,7 +14,7 @@ if [ "$1" = "bart" -o "$1" = "gertjan" -o "$1" = "martijn" ]; then
 	ln -s /etc/ecubee/hostname-$1 /etc/hostname
 #	mv /etc/pam.d/common-session /etc/pam.d/common-session.backup
 #	head -n -1 /etc/pam.d/common-session.backup > /etc/pam.d/common-session
-	rm -f /etc/modules-load.d/hipd.conf
+	rm -f /etc/modules-load.d/hidp.conf
 	rm -f /etc/modules-load.d/rfcomm.conf
 	rm -f /etc/dropbear/dropbear_rsa_host_key
 	/usr/sbin/update-modules
