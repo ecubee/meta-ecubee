@@ -4,7 +4,7 @@ Requires=pvr-init.service
 After=syslog.target pvr-init.service
 
 [Service]
-ExecStart=-/usr/bin/X -retro
+ExecStart=-/usr/bin/X -retro -s 0
 ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]
